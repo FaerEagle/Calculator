@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="610.0" prefWidth="566.0" stylesheets="@MainWindowStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.MainWindowController">
+   <children>
+      <Pane fx:id="titlePane" prefHeight="37.0" prefWidth="566.0">
+         <children>
+            <ImageView fx:id="btnClose" fitHeight="16.0" fitWidth="16.0" layoutX="523.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/close.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btnMinimize" fitHeight="16.0" fitWidth="16.0" layoutX="501.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/hide.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="46.0" layoutY="12.0" text="Calculator" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="25.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="5.0" layoutY="37.0" prefHeight="568.0" prefWidth="556.0" styleClass="mainPane">
+         <children>
+            <Pane layoutX="14.0" layoutY="14.0" prefHeight="116.0" prefWidth="528.0" styleClass="highlight">
+               <children>
+                  <Label fx:id="lblResult" alignment="TOP_RIGHT" layoutX="21.0" layoutY="34.0" prefHeight="42.0" prefWidth="484.0" text="0.0" textFill="WHITE">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="btn7" layoutX="14.0" layoutY="139.0" onMouseClicked="#onNumberClicked" prefHeight="100.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="40.0" layoutY="29.0" text="7" textFill="WHITE">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="highlight" />
+                  <String fx:value="btnNumber" />
+               </styleClass>
+            </Pane>
+            <Pane fx:id="btn8" layoutX="121.0" layoutY="139.0" onMouseClicked="#onNumberClicked" prefHeight="100.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="41.0" layoutY="30.0" text="8" textFill="WHITE">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="highlight" />
+                  <String fx:value="btnNumber" />
+               </styleClass>
+            </Pane>
+            <Pane fx:id="btn9" layoutX="228.0" layoutY="139.0" onMouseClicked="#onNumberClicked" prefHeight="100.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="40.0" layoutY="29.0" text="9" textFill="WHITE">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="highlight" />
+                  <String fx:value="btnNumber" />
+               </styleClass>
+            </Pane>
+            <Pane fx:id="btnPlus" layoutX="336.0" layoutY="139.0" onMouseClicked="#onSymbolClicked" prefHeight="100.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="39.0" layoutY="29.0" text="+" textFill="WHITE">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="highlight" />
+                  <String fx:value="btnSymbol" />
+               </styleClass>
+            </Pane>
+            <Pane fx:id="btn4" layoutX="14.0" layoutY="245.0" onMouseClicked="#onNumberClicked" prefHeight="100.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="39.0" layoutY="29.0" text="4" textFill="WHITE">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="highlight" />
+                  <String fx:value="btnNumber" />
+               </styleClass>
+            </Pane>
+            <Pane fx:id="btn5" layoutX="121.0" layoutY="245.0" onMouseClicked="#onNumberClicked" prefHeight="100.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="40.0" layoutY="29.0" text="5" textFill="WHITE">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="highlight" />
+                  <String fx:value="btnNumber" />
+               </styleClass>
+            </Pane>
+            <Pane fx:id="btn6" layoutX="228.0" layoutY="245.0" onMouseClicked="#onNumberClicked" prefHeight="100.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="40.0" layoutY="29.0" text="6" textFill="WHITE">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="highlight" />
+                  <String fx:value="btnNumber" />
+               </styleClass>
+            </Pane>
+            <Pane fx:id="btnMinus" layoutX="336.0" layoutY="245.0" onMouseClicked="#onSymbolClicked" prefHeight="100.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="44.0" layoutY="29.0" text="-" textFill="WHITE">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="highlight" />
+                  <String fx:value="btnSymbol" />
+               </styleClass>
+            </Pane>
+            <Pane fx:id="btn1" layoutX="14.0" layoutY="351.0" onMouseClicked="#onNumberClicked" prefHeight="100.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="39.0" layoutY="29.0" text="1" textFill="WHITE">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="highlight" />
+                  <String fx:value="btnNumber" />
+               </styleClass>
+            </Pane>
+            <Pane fx:id="btn2" layoutX="121.0" layoutY="351.0" onMouseClicked="#onNumberClicked" prefHeight="100.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="40.0" layoutY="29.0" text="2" textFill="WHITE">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="highlight" />
+                  <String fx:value="btnNumber" />
+               </styleClass>
+            </Pane>
+            <Pane fx:id="btn3" layoutX="228.0" layoutY="351.0" onMouseClicked="#onNumberClicked" prefHeight="100.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="40.0" layoutY="29.0" text="3" textFill="WHITE">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="highlight" />
+                  <String fx:value="btnNumber" />
+               </styleClass>
+            </Pane>
+            <Pane fx:id="btnMultiply" layoutX="336.0" layoutY="351.0" onMouseClicked="#onSymbolClicked" prefHeight="100.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="43.0" layoutY="29.0" text="*" textFill="WHITE">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="highlight" />
+                  <String fx:value="btnSymbol" />
+               </styleClass>
+            </Pane>
+            <Pane fx:id="btnClear" layoutX="14.0" layoutY="456.0" onMouseClicked="#onButtonClearClicked" prefHeight="100.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="37.0" layoutY="29.0" text="C" textFill="WHITE">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="highlight" />
+                  <String fx:value="btnSymbol" />
+               </styleClass>
+            </Pane>
+            <Pane fx:id="btn0" layoutX="121.0" layoutY="456.0" onMouseClicked="#onNumberClicked" prefHeight="100.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="40.0" layoutY="29.0" text="0" textFill="WHITE">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="highlight" />
+                  <String fx:value="btnNumber" />
+               </styleClass>
+            </Pane>
+            <Pane fx:id="btnEquals" layoutX="228.0" layoutY="456.0" onMouseClicked="#onSymbolClicked" prefHeight="100.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="39.0" layoutY="29.0" text="=" textFill="WHITE">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="highlight" />
+                  <String fx:value="btnSymbol" />
+               </styleClass>
+            </Pane>
+            <Pane fx:id="btnDivide" layoutX="336.0" layoutY="456.0" onMouseClicked="#onSymbolClicked" prefHeight="100.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="45.0" layoutY="29.0" text="/" textFill="WHITE">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="highlight" />
+                  <String fx:value="btnSymbol" />
+               </styleClass>
+            </Pane>
+            <Pane fx:id="btnOpenHistory" layoutX="442.0" layoutY="139.0" onMouseClicked="#onButtonHistoryClicked" prefHeight="206.0" prefWidth="100.0">
+               <styleClass>
+                  <String fx:value="highlight" />
+                  <String fx:value="btnSymbol" />
+               </styleClass>
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="25.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/history.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="btnClearHistory" layoutX="442.0" layoutY="351.0" onMouseClicked="#onButtonHistoryClicked" prefHeight="206.0" prefWidth="100.0">
+               <styleClass>
+                  <String fx:value="highlight" />
+                  <String fx:value="btnSymbol" />
+               </styleClass>
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="25.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/delete.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="actionLogPane" layoutX="5.0" layoutY="37.0" prefHeight="568.0" prefWidth="556.0" styleClass="actionLogPane">
+         <children>
+            <Pane prefHeight="37.0" prefWidth="556.0">
+               <children>
+                  <ImageView fx:id="actionLogButtonClose" fitHeight="22.0" fitWidth="22.0" layoutX="518.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/cancel.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <VBox layoutY="37.0" prefHeight="511.0" prefWidth="556.0">
+               <children>
+                  <Label fx:id="historyResult">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="25.0" />
+               </padding>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
